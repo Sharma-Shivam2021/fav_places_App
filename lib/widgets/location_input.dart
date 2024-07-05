@@ -24,7 +24,7 @@ class _LocationInputState extends State<LocationInput> {
   String get locationImage {
     final lat = _pickedLocation!.latitude;
     final lng = _pickedLocation!.longitude;
-    return 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=600&height=400&center=lonlat:$lng,$lat&marker=lonlat:$lng,$lat&zoom=6&apiKey=aa7b628bea4f46e5a012a4cb3cb49b49';
+    return 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=600&height=400&center=lonlat:$lng,$lat&marker=lonlat:$lng,$lat&zoom=6&apiKey=API KEY';
   }
 
   Future<bool> _checkLocationService() async {
@@ -64,7 +64,7 @@ class _LocationInputState extends State<LocationInput> {
     _locationData = await location.getLocation();
 
     final uri = Uri.parse(
-        'http://api.openweathermap.org/geo/1.0/reverse?lat=${_locationData!.latitude}&lon=${_locationData!.longitude}&appid=5d7162dcb3277f7bcac561a59043d76c');
+        'http://api.openweathermap.org/geo/1.0/reverse?lat=${_locationData!.latitude}&lon=${_locationData!.longitude}&appid=API KEY');
     final http.Response resData = await http.get(uri);
     final data = json.decode(resData.body);
     address = "${data[0]["name"]}, ${data[0]["state"]}, ${data[0]["country"]}";
