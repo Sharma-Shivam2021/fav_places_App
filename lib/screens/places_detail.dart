@@ -9,7 +9,8 @@ class PlaceDetailScreen extends StatelessWidget {
   String get locationImage {
     final lat = place.location.latitude;
     final lng = place.location.longitude;
-    return 'https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=600&height=400&center=lonlat:$lng,$lat&marker=lonlat:$lng,$lat&zoom=6&apiKey=aa7b628bea4f46e5a012a4cb3cb49b49';
+    return #API call#;
+    //https://maps.geoapify.com/v1/staticmap?style=osm-bright-smooth&width=600&height=400&center=lonlat:$lng,$lat&marker=lonlat:$lng,$lat&zoom=6&apiKey='
   }
 
   @override
